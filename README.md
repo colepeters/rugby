@@ -6,7 +6,7 @@ Rugby is a colour conversion web app that helps designers and developers speak e
 
 I am now redeveloping the app from the ground up, with the following technical goals:
 
-- Built on JavaScript, so colour conversion can be handled client-side, without the need for a page reload (as in previous version)
+- Built on JavaScript (we don't need Rails for an app of this scale)
 
 - Colour input options: RGB(a), HSL(a), hexadecimal
 
