@@ -1,3 +1,15 @@
+# Middleman ignores:
+
+# Ignore bundler config
+/.bundle
+
+# Ignore the build directory
+/build
+
+# Ignore Sass' cache
+/.sass-cache
+
+# My ignores:
 # Created by http://gitignore.io
 
 ### OSX ###
