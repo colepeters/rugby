@@ -6,7 +6,15 @@
 $('input.convert').click(convert);
 
 function convert() {
+    // Clear the text area before output so we don't duplicate conversions
     $('textarea.swatchOutput').text('');
+
+    // Here's where the magic happens.
+    // First we log each input.swatchInput's name as a variable for output.
+    // Then we take the values entered for the colour swatch and split them into
+    // a space-delimited array; each item in that array is then divided by 255,
+    // rounded off to 3 decimal places, and appended to the text area with the
+    // relevant Objective-C prefix for a UIColor element.
     $('input.swatchInput').each(function(){
         var name    =   $(this).parent().find('input.swatchName').val();
         var input   =   $(this).val();
