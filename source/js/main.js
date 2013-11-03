@@ -2,11 +2,12 @@ $('input.convert').click(convert);
 
 function convert() {
     $('input.swatchInput').each(function(){
-    var input   =   $(this).val();
-    var colours =   input.split(' ');
-    var output  =   new Array((colours[0] / 255).toFixed(3).replace('.000',''), (colours[1] / 255).toFixed(3).replace('.000',''), (colours[2] / 255).toFixed(3).replace('.000',''));
-    $('textarea.swatchOutput').append(output[0] + ' ' + output[1] + ' ' + output[2] + '\n');
-});
+        var name    =   $(this).parent().find('input.swatchName').val();
+        var input   =   $(this).val();
+        var colours =   input.split(' ');
+        var output  =   new Array((colours[0] / 255).toFixed(3).replace('.000',''), (colours[1] / 255).toFixed(3).replace('.000',''), (colours[2] / 255).toFixed(3).replace('.000',''));
+        $('textarea.swatchOutput').append(name + ': colorWithRed:' + output[0] + ' green:' + output[1] + ' blue:' + output[2] + '\n');
+    });
 }
 
 // Swatch input/output text colourisation
