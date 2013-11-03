@@ -1,6 +1,7 @@
-$('input.moar').click(function() {
-    $('div.theInputs').append("<div class='inputBlock'> <label for='swatchName'>Swatch name:</label> <input type='text' name='swatchName' class='swatchName'> <label for='swatchInput'>RGB:</label> <input type='text' name='swatchInput' class='swatchInput'> </div>");
-});
+//  ===========================================================================
+//  Convert RGB integer triples to fractional triplets
+//  and place in output text area
+//  ===========================================================================
 
 $('input.convert').click(convert);
 
@@ -15,21 +16,34 @@ function convert() {
     });
 }
 
-// Swatch input/output text colourisation
-$(function(){
-    $('input.swatchInput').keyup(function(){
-        // Split the input value into a space-delimited array
-        var value = $(this).val().split(' ');
 
-        // If the values haven't been typed yet, default to 0
-        if (value[0] == null) { value[0] = 0; }
-        if (value[1] == null) { value[1] = 0; }
-        if (value[2] == null) { value[2] = 0; }
+//  ===========================================================================
+//  Swatch input/output text colourisation
+//  ===========================================================================
 
-        // Make 'inputColor' an rgb() swatch using the values typed
-        inputColour = 'rgb(' + value[0] + ',' + value[1] + ',' + value[2] + ')';
+$('input.swatchInput').keyup(colourise);
 
-        // Change the input text colour to the colour being typed  
-        $(this).css('color', inputColour);
-    });
+function colourise() {
+    // Split the input value into a space-delimited array
+    var value = $(this).val().split(' ');
+
+    // If the values haven't been typed yet, default to 0
+    if (value[0] == null) { value[0] = 0; }
+    if (value[1] == null) { value[1] = 0; }
+    if (value[2] == null) { value[2] = 0; }
+
+    // Make 'inputColor' an rgb() swatch using the values typed
+    inputColour = 'rgb(' + value[0] + ',' + value[1] + ',' + value[2] + ')';
+
+    // Change the input text colour to the colour being typed  
+    $(this).css('color', inputColour);
+}
+
+
+//  ===========================================================================
+//  Add another input row
+//  ===========================================================================
+
+$('input.moar').click(function() {
+    $('div.theInputs').append("<div class='inputBlock'> <label for='swatchName'>Swatch name:</label> <input type='text' name='swatchName' class='swatchName'> <label for='swatchInput'>RGB:</label> <input type='text' name='swatchInput' class='swatchInput'> </div>");
 });
