@@ -1,10 +1,12 @@
 $('input.convert').click(convert);
 
 function convert() {
-    var input   =   $('input.swatchInput').val();
+    $('input.swatchInput').each(function(){
+    var input   =   $(this).val();
     var colours =   input.split(' ');
     var output  =   new Array((colours[0] / 255).toFixed(3).replace('.000',''), (colours[1] / 255).toFixed(3).replace('.000',''), (colours[2] / 255).toFixed(3).replace('.000',''));
-    $('textarea.swatchOutput').val(output[0] + ' ' + output[1] + ' ' + output[2]);
+    $('textarea.swatchOutput').append(output[0] + ' ' + output[1] + ' ' + output[2] + '\n');
+});
 }
 
 // Swatch input/output text colourisation
