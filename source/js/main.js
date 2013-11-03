@@ -1,6 +1,7 @@
 $('input.convert').click(convert);
 
 function convert() {
+    $('textarea.swatchOutput').text('');
     $('input.swatchInput').each(function(){
         var name    =   $(this).parent().find('input.swatchName').val();
         var input   =   $(this).val();
