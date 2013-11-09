@@ -6,6 +6,13 @@
 $('button.convert').click(convert);
 
 function convert() {
+
+    // Fade in the output area if it hasn't been already
+    if ($('div.outputBlock').hasClass('hidden')) {
+        $('div.outputBlock').fadeIn(400);
+        $('div.outputBlock').removeClass('hidden');
+    }
+
     // Clear the text area before output so we don't duplicate conversions
     $('textarea.swatchOutput').text('');
 
