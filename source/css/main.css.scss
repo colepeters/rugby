@@ -20,6 +20,14 @@
 
 ============================================================================ */
 
+$red: rgb(255,127,118);
+$grn: rgb(48,220,181);
+$blu: rgb(103,132,168);
+
+$darkRed: darken($red, 20%);
+$darkGrn: darken($grn, 20%);
+$darkBlu: darken($blu, 20%);
+
 html {
     font-size: 16px;
 }
@@ -46,6 +54,8 @@ body, input, textarea, button {
         background: rgb(244,244,244);
         width: 50%;
         height: 250px;
+        padding: 2rem;
+        font-size: 1.2rem;
     }
 }
 
@@ -55,26 +65,33 @@ label {
     text-transform: uppercase;
 }
 
-section.theHeader {
+section {
 
-    h1, h2 {
-        font-size: 1rem;
-        text-transform: uppercase;
-        display: inline-block;
-        letter-spacing: 1px;
+    &.theHeader {
+
+        h1, h2 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h1 { font-weight: 600; }
+        h2 { font-weight: 300; }
     }
 
-    h1 { font-weight: 600; }
-    h2 { font-weight: 300; }
+    &.theFooter {
+        margin-top: 4rem; 
+        p {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: rgb(120,120,120);
+
+            a {
+                color: black;
+            }
+        }
+    }
 }
-
-$red: rgb(255,127,118);
-$grn: rgb(48,220,181);
-$blu: rgb(103,132,168);
-
-$darkRed: darken($red, 20%);
-$darkGrn: darken($grn, 20%);
-$darkBlu: darken($blu, 20%);
 
 
 /* ============================================================================
@@ -84,16 +101,29 @@ $darkBlu: darken($blu, 20%);
 ============================================================================ */
 
 body {
-    margin: 4rem 1rem;
+    margin: 2rem 1rem;
     text-align: center;
 }
 
 section {
     margin: 0 auto;
     max-width: 80%;
+    @include outer-container;
+    min-width: 960px;
+
+    &.theHeader {
+        h1, h2 {
+            display: inline-block;
+        }
+    }
+
+    &.theInputs {
+        margin-top: 2rem;
+    }
 }
 
 img.rugbyIcon {
+    display: block;
     max-width: 156px;
     margin: 0 auto 2rem;
     height: auto;
