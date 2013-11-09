@@ -3,13 +3,17 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Cole Peters: Design and development
 
 # THANKS
 
-    <name>
+   Phil Letourneau, Jon Hocking, Justin Maxwell
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, CSS3
+    HTML5, CSS3, SASS
     jQuery, Modernizr
+    Bourbon, Neat
+    Middleman
+    Git
+    cloud.Typography
