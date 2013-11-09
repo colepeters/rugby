@@ -3,7 +3,7 @@
 //  and place in output text area
 //  ===========================================================================
 
-$('input.convert').click(convert);
+$('button.convert').click(convert);
 
 function convert() {
     // Clear the text area before output so we don't duplicate conversions
@@ -54,7 +54,7 @@ function colourise() {
 
 var inputRow = "<div class='inputBlock'> <label for='swatchName'>Colour name:</label> <input type='text' name='swatchName' class='swatchName'> <label for='swatchInput'>RGB:</label> <input type='text' name='swatchInput' class='swatchInput'> </div>"
 
-$('input.moar').click(function() {
+$('button.moar').click(function() {
     $('div.theInputs').append(inputRow);
     $('input.swatchInput').keyup(colourise);
 });
