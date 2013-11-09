@@ -8,9 +8,9 @@ $('button.convert').click(convert);
 function convert() {
 
     // Fade in the output area if it hasn't been already
-    if ($('div.outputBlock').hasClass('hidden')) {
-        $('div.outputBlock').fadeIn(400);
-        $('div.outputBlock').removeClass('hidden');
+    if ($('section.outputBlock').hasClass('hidden')) {
+        $('section.outputBlock').fadeIn(400);
+        $('section.outputBlock').removeClass('hidden');
     }
 
     // Clear the text area before output so we don't duplicate conversions
@@ -59,9 +59,9 @@ function colourise() {
 //  Add another input row
 //  ===========================================================================
 
-var inputRow = "<div class='inputBlock'> <label for='swatchName'>Colour name:</label> <input type='text' name='swatchName' class='swatchName'> <label for='swatchInput'>RGB:</label> <input type='text' name='swatchInput' class='swatchInput'> </div>"
+var inputRow = "<div class='inputBlock'> <label for='swatchName'>Colour name:</label> <input type='text' name='swatchName' class='swatchName'> <label for='swatchInput'>RGB value:</label> <input type='text' name='swatchInput' class='swatchInput'> </div>"
 
 $('button.moar').click(function() {
-    $('div.theInputs').append(inputRow);
+    $('section.theInputs').append(inputRow);
     $('input.swatchInput').keyup(colourise);
 });
