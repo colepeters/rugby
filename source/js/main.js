@@ -56,4 +56,5 @@ var inputRow = "<div class='inputBlock'> <label for='swatchName'>Swatch name:</l
 
 $('input.moar').click(function() {
     $('div.theInputs').append(inputRow);
+    $('input.swatchInput').keyup(colourise);
 });
