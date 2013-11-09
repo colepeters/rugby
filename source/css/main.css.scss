@@ -54,6 +54,19 @@ label {
     text-transform: uppercase;
 }
 
+section.theHeader {
+
+    h1, h2 {
+        font-size: 1rem;
+        text-transform: uppercase;
+        display: inline-block;
+        letter-spacing: 1px;
+    }
+    
+    h1 { font-weight: 600; }
+    h2 { font-weight: 300; }
+}
+
 
 /* ============================================================================
 
@@ -73,6 +86,7 @@ section {
 
 img.rugbyIcon {
     max-width: 156px;
+    margin: 0 auto 2rem;
     height: auto;
     @include animation(bounce 1.2s ease-in-out infinite alternate);
 }
