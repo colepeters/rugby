@@ -16,7 +16,6 @@ function convert() {
     // Clear the text area before output so we don't duplicate conversions
     $('textarea.swatchOutput').text('');
 
-    // Here's where the magic happens.
     // First we log each input.swatchInput's name as a variable for output.
     // Then we take the values entered for the colour swatch and split them into
     // a space-delimited array; each item in that array is then divided by 255,
@@ -64,4 +63,33 @@ var inputRow = "<div class='inputBlock'> <label for='swatchName'>Colour name:</l
 $('button.moar').click(function() {
     $('section.theInputs').append(inputRow);
     $('input.swatchInput').keyup(colourise);
+});
+
+//  ===========================================================================
+//  Colour name placeholder text
+//  ===========================================================================
+
+var colourNames = [
+    'Sweet poop brown',
+    'Flat turqoise',
+    'Slimebucket ochre',
+    'Razzle dazzle',
+    'Fresh Prince green',
+    'Potentially purple',
+    'Bitter tears grey',
+    'Greige',
+    'Mustard stain yellow',
+    'Puddin’ Pops Pink',
+    '1980’s off-white',
+    'Barry white',
+    'James brown',
+    'Professorial plum',
+    'Walterish white',
+    'Heisenberg blue'
+]
+
+var rando = colourNames[Math.floor(Math.random() * colourNames.length)];
+
+$(function(){
+    $('input.swatchName').attr('placeholder', 'e.g. ' + rando)
 });
