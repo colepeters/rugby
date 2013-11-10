@@ -1,5 +1,7 @@
 # Rugby
 
+[colepeters.github.io/rugby](http://colepeters.github.io/rugby)
+
 Rugby converts RGB colour swatches from 8-bit integer values (0–255) to percentages (0–1). This means designers, who often work with RGB values like `r255 g0 b180` can easily translate these colour values for instant integration into Objective-C (where the standard syntax for the same swatch would be `colorWithRed:1 green:0 blue:0.706`).
 
 Rugby is particularly useful when authoring design specs or style guides, as it offers unlimited batch conversion with colour swatch naming.
