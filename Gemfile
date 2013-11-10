@@ -18,3 +18,6 @@ end
 # Bourbon and Neat
 gem "bourbon"
 gem "neat"
+
+# Middleman GH Pages
+gem 'middleman-gh-pages'
