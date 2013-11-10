@@ -12,7 +12,7 @@ Rugby is particularly useful when authoring design specs or style guides, as it 
 
 - Convert any number of colour swatches at once (Rugby 1.0 did conversions one at a time)
 - Instant conversion — no page reloading (1.0 ran on Rails and thus required a reload every time)
-- Colour naming (since we can now convert in batch, naming clarify which swatches are which)
+- Colour naming (since we can now convert in batch, naming helps to clarify which swatches are which)
 - All-new design. Yum.
 
 ## Up next
