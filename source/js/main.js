@@ -22,12 +22,13 @@ function convert() {
     // a space-delimited array; each item in that array is then divided by 255,
     // rounded off to 3 decimal places, and appended to the text area with the
     // relevant Objective-C prefix for a UIColor element.
+    // JS NaN's are replaced with question marks.
     $('input.swatchInput').each(function(){
         var name    =   $(this).parent().find('input.swatchName').val();
                         if (name != '' ) { name = name + ': '}
         var input   =   $(this).val();
         var colours =   input.split(' ');
-        var output  =   new Array((colours[0] / 255).toFixed(3).replace('.000',''), (colours[1] / 255).toFixed(3).replace('.000',''), (colours[2] / 255).toFixed(3).replace('.000',''));
+        var output  =   new Array((colours[0] / 255).toFixed(3).replace('.000','').replace('NaN', '?'), (colours[1] / 255).toFixed(3).replace('.000','').replace('NaN', '?'), (colours[2] / 255).toFixed(3).replace('.000','').replace('NaN', '?'));
         $('textarea.swatchOutput').append(name + 'colorWithRed:' + output[0] + ' green:' + output[1] + ' blue:' + output[2] + '\n');
     });
 }
