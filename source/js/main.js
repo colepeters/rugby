@@ -61,7 +61,7 @@ function colourise() {
 var inputRow = "<div class='inputBlock'> <label for='swatchName'>Colour name:</label> <input type='text' name='swatchName' class='swatchName'> <label for='swatchInput'>RGB value:</label> <input type='text' name='swatchInput' class='swatchInput'> </div>"
 
 $('button.moar').click(function() {
-    $('section.theInputs').append(inputRow);
+    $('section.theInputs').append(inputRow).children(':last').hide().fadeIn(400);
     $('input.swatchInput').keyup(colourise);
 });
 
