@@ -1,21 +1,39 @@
 # Rugby
 
-## Background
+Rugby converts RGB colour swatches from 8-bit integer values (0–255) to percentages (0–1). This means designers, who often work with RGB values like `r255 g0 b180` can easily translate these colour values for instant integration into Objective-C (where the standard syntax for the same swatch would be `colorWithRed:1 green:0 blue:0.706`).
 
-Rugby is a colour conversion web app that helps designers and developers speak each other's language. I originally built Rugby with Rails while learning the framework, but have come to realise this is not the most effective form for the app to take.
+Rugby is particularly useful when authoring design specs or style guides, as it offers unlimited batch conversion with colour swatch naming.
 
-I am now redeveloping the app from the ground up, with the following technical goals:
+## Current status
 
-- Built on JavaScript (we don't need Rails for an app of this scale)
+10 November 2013 — Rugby 2.0 is complete! Currently implemented:
 
-- Colour input options: RGB(a), HSL(a), hexadecimal
+- Convert any number of colour swatches at once (Rugby 1.0 did conversions one at a time)
+- Instant conversion — no page reloading (1.0 ran on Rails and thus required a reload every time)
+- Colour naming (since we can now convert in batch, naming clarify which swatches are which)
+- All-new design. Yum.
 
-- Colour output options: As above, with notational specificity for CSS and Objective-C
+## Up next
 
-- Input and output multiple colour swatches at once
+- Copying converted swatches to your clipboard
+- Export converted swatches as a Markdown file
+- More input options (RGBa, HSL, HSLa, hex)
 
-- Attach labels to each swatch for output
+## Development logs
+
+I've been keeping track of progress in updating Rugby to 2.0; take a look [in the Wiki](https://github.com/colepeters/rugby/wiki/_pages) for more info. More entries coming soon, too!
+
+## Colophon
+
+Rugby is built with:
+
+- [Middleman](http://middlemanapp.com)
+- [SASS](http://sass-lang.com)
+- [Bourbon](http://bourbon.io)
+- [cloud.Typography](http://www.typography.com/cloud/welcome/)
+- [Bower](http://bower.io)
+- And of course, a little HTML and jQuery
 
 ## Your input
 
-If you are a designer or developer who would find a tool like this useful, I'd love to hear more about any features you would find useful, or needs you have that aren't being solved by existing tools. Pass your ideas my way [on Twitter](http://www.twitter.com/cole_peters) or [email](mailto:cole@colepeters.com?subject=Rugby).
+I'd love to hear more about any features you would find useful, or needs you have that aren't being solved by existing tools. Pass your ideas my way [on Twitter](http://www.twitter.com/cole_peters) or [email](mailto:cole@colepeters.com?subject=Rugby).
