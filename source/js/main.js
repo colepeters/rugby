@@ -61,7 +61,7 @@ function colourise() {
 //  Add another input row
 //  ===========================================================================
 
-var inputRow = "<div class='inputBlock'> <label for='swatchName'>Colour name:</label> <input type='text' name='swatchName' class='swatchName'> <label for='swatchInput'>RGB value:</label> <input type='text' name='swatchInput' class='swatchInput'> </div>"
+var inputRow = "<div class='inputBlock'> <label for='swatchName'>Give it a name:</label> <input type='text' name='swatchName' class='swatchName'> <label for='swatchInput'>RGB value:</label> <input type='text' name='swatchInput' class='swatchInput'> </div>"
 
 $('button.moar').click(function() {
     $('section.theInputs').append(inputRow).children(':last').hide().fadeIn(400);
