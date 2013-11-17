@@ -73,7 +73,6 @@ $('button.moar').click(function() {
 //  ===========================================================================
 
 var colourNames = [
-    'Sweet poop brown',
     'Flat turqoise',
     'Slimebucket ochre',
     'Razzle dazzle',
