@@ -21,10 +21,6 @@ Rugby is particularly useful when authoring design specs or style guides, as it 
 - Export converted swatches as a Markdown file
 - More input options (RGBa, HSL, HSLa, hex)
 
-## Development logs
-
-I've been keeping track of progress in updating Rugby to 2.0; take a look [in the Wiki](https://github.com/colepeters/rugby/wiki/_pages) for more info. More entries coming soon, too!
-
 ## Colophon
 
 Rugby is built with:
